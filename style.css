@@ -1,0 +1,142 @@
+* { box-sizing: border-box; }
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  /* Plano de fundo definido no CSS (troque aqui) */
+  background: url('Escola.png') no-repeat center/cover;
+  /* fallback de cor caso imagem não carregue */
+  background-color: #f4f7fb;
+  color: #1b2c4d;
+  margin: 0;
+  min-height: 100vh;
+  padding: 0.95rem;
+}
+
+/* Se quiser desativar a imagem e usar cor sólida, use:
+body { background: #f4f7fb; }
+*/
+main {
+  max-width: 980px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.93);
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  padding: 1rem;
+}
+header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+header h1 {
+  font-size: 1.45rem;
+  margin: 0;
+  color: #d6e1f5;
+}
+header p {
+  margin: 0.25rem 0 0;
+  color: #43597f;
+  font-weight: 600;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  font-size: 0.95rem;
+}
+th,
+td {
+  border: 1px solid #d6e1f5;
+  padding: 0.55rem;
+  text-align: center;
+}
+th {
+  background: #2f6dcf;
+  color: #f1f9ff;
+  font-weight: 700;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+input[type=number] {
+  width: 70px;
+  max-width: 100%;
+  padding: 0.38rem;
+  border-radius: 8px;
+  border: 1px solid #abc4ec;
+  text-align: center;
+}
+button {
+  margin-top: 1rem;
+  padding: 0.58rem 1rem;
+  border: 0;
+  background: linear-gradient(130deg, #0078d7, #1a47b8);
+  color: white;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+button:hover {
+  transform: scale(1.01);
+  opacity: 0.95;
+}
+.background-controls {
+  margin: 1rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+}
+.background-controls label {
+  font-weight: 600;
+  color: #1b2c4d;
+}
+.background-controls input[type=text],
+.background-controls input[type=color] {
+  max-width: 220px;
+  min-width: 130px;
+  padding: 0.32rem;
+  border: 1px solid #abc4ec;
+  border-radius: 8px;
+}
+.background-controls button {
+  margin-top: 0;
+}
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  flex-wrap: wrap;
+}
+.aprovado { background: #d5f3d7 !important; }
+.reprovado { background: #ffe6e6 !important; }
+.obs {
+  margin-top: 0.9rem;
+  color: #214665;
+  font-size: 0.96rem;
+}
+footer {
+  margin-top: 1rem;
+  font-size: 0.83rem;
+  color: #445c7d;
+}
+@media (max-width: 790px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  table {
+    font-size: 0.88rem;
+  }
+  input[type=number] { width: 56px; }
+}
+@media (max-width: 540px) {
+  th:nth-child(1), td:nth-child(1) { min-width: 120px; }
+  th:nth-child(2), th:nth-child(3), th:nth-child(4), th:nth-child(5), th:nth-child(6),
+  td:nth-child(2), td:nth-child(3), td:nth-child(4), td:nth-child(5), td:nth-child(6) {
+    padding: 0.38rem;
+  }
+  button { width: 100%; }
+}
